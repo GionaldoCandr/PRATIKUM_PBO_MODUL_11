@@ -64,6 +64,17 @@ public class Main {
             System.out.println("[ERROR CHECKED EXCEPTION] " + e.getMessage());
         }
         // soal 5
-        
+          SistemAkademik sistem1 = new SistemAkademik();
+
+        try {
+            sistem1.cetakDokumenKrs("krs_kosong.txt");
+            
+            System.out.println("Pesan ini tidak akan tercetak.");
+            
+        } catch (FileNotFoundException e) {
+            System.out.println("[ERROR FILE] " + e.getMessage());
+            
+        } 
+
     }    
 }

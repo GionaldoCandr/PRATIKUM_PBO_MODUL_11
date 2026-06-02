@@ -10,4 +10,15 @@ class SistemAkademik {
         
         System.out.println(" -> Pencetakan Berhasil! Dokumen KRS (" + namaFile + ") sedang dicetak.");
     }
+
+    public void gabungKelas(String namaKelas, int jumlahPeserta) throws KelasPenuhException {
+        System.out.println("Mencoba bergabung ke kelas: " + namaKelas + " dengan " + jumlahPeserta + " peserta...");
+        
+        if (jumlahPeserta >= 30) {
+            throw new KelasPenuhException("Gagal: Kelas '" + namaKelas + "' sudah penuh dengan " + jumlahPeserta + " peserta!");
+        }
+        
+        System.out.println(" -> Bergabung Berhasil! Anda telah bergabung ke kelas '" + namaKelas + "'.");
+}
+
 }
